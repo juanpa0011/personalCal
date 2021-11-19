@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Presupuesto Personal</title>
+</head>
+<body>
+    <!-- <h1>HELLO WORLD </h1>-->
+
+    <aside>
+
+    </aside>
+    <main>
+        <input type="checkbox" name="menu" id="mobile--menu">
+        <label name="menu" class="mobile--nav">
+            <span></span>
+        </label>
+        <ul>
+                <li class="logged">HOME</li>
+                <li class="logged">MONTH</li>
+                <li class="logged">NEW USER</li>
+                <li class="logged">LOG OUT</li>
+                <li>LOG IN</li>
+        </ul>
+        <div class="folder hidden">
+            <div class="container--register">
+                <div class="register--title">
+                    <p>AR$ - </p>
+                    <label class="hidden" for="category">Category</label>
+                    <select class="hidden" name="category " id="category_select">
+                        <option value="OTHER">OTHER</option>
+                        <option value="MANAGEMENT">MANAGEMENT</option>
+                        <option value="TAXES">TAXES</option>
+                        <option value="GROCERIES">GROCERIES</option>
+                        <option value="TRAVEL">TRAVEL</option>
+                        <option value="INCOME">INCOME</option>
+                    </select>
+                    <label class="hidden" for="month">Month</label>
+                    <select class="hidden" name="month" id="month_select">
+                        <option value="1">JAN</option>
+                        <option value="2">FEB</option>
+                        <option value="3">MAR</option>
+                        <option value="4">APR</option>
+                        <option value="5">MAY</option>
+                        <option value="6">JUN</option>
+                        <option value="7">JUL</option>
+                        <option value="8">AUG</option>
+                        <option value="9">SEP</option>
+                        <option value="10">OCT</option>
+                        <option value="11">NOV</option>
+                        <option value="12">DEC</option>
+                    </select>
+                    <label class="hidden" for="day">Day</label>
+                    <select class="hidden" name="day" id="day_select">
+                        <option value="0">ALL</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                    <label class="hidden" for="year">Year</label>
+                    <select class="hidden" name="year" id="year_select">
+                    </select>
+                </div>
+                <div class="console--border">
+
+                </div>
+                <div class="register">
+                        <div class="table--header">
+                            <p>Date</p>
+                            <p>Description</p>
+                            <p>Amount</p>
+                        </div>
+                        <div class="register--scroll">
+
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="folder hidden">
+            <div class="container--console">
+                <div class="console--header">
+                    <p>ADD NEW OPERATION </p>
+                </div>
+                <div class="console--border">
+
+                </div>
+                <div class="console--form">
+                    <label for="amount">Set amount</label>
+                    <input name="amount" type="number" min="1" placeholder="AR$ 1000" required>
+                    <label for="type">Set amount type</label>
+                    <select name="type" id="input_type">
+                        <option value="EXPENSES">EXPENSES</option>
+                        <option value="INCOME">INCOME</option>
+                    </select>
+                    <label for="category">Set category</label>
+                    <select name="category" id="input_category">
+                        <option id="input_cat_groceries" value="GROCERIES">GROCERIES</option>
+                        <option id="input_cat_taxes" value="TAXES">TAXES</option>
+                        <option id="input_cat_management" value="MANAGEMENT">MANAGEMENT</option>
+                        <option id="input_cat_other" value="OTHER">OTHER</option>
+                        <option id="input_cat_travel" value="TRAVEL">TRAVEL</option>
+                        <option class="hidden" id="input_cat_income" value="INCOME">INCOME</option>
+                    </select>
+                    <label for="description">Set description</label>
+                    <input name="description" type="text" placeholder="Deliah Resto's bill" maxlength="30">
+                </div>
+                <div class="console--border">
+
+                </div>
+                <div class="console--btn-holder">
+                    <div class="button hidden" id="btn--delete">
+                        DELETE
+                    </div>
+                    <div class="button" id="btn--cancel">
+                        CANCEL
+                    </div>
+                    <div class="button" id="btn--confirm--op">
+                        CONFIRM
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="folder--logger">
+            <div class="container-logger">
+                <div class="console--header">
+                    <p>ADD NEW USER</p>
+                </div>
+                <div class="console--border"></div>
+                <div class="console--form">
+                    <label for="email">Email</label>
+                    <input name="email" type="text" required>
+                    <label class="hidden" for="reemail">RE-Email</label>
+                    <input class="hidden" name="reemail" type="text" required>
+                    <label for="password" maxlength="30">Password</label>
+                    <input name="password" type="password" required>
+                    <label class="hidden" for="repassword" maxlength="30">RE-Password</label>
+                    <input class="hidden" name="repassword" type="password" required>
+                </div>
+                <div class="console--border">
+                </div>
+                <div class="console--btn-holder">
+                    <div class="button hidden" id="btn--delete">
+                        DELETE
+                    </div>
+                    <div class="button hidden" id="btn--cancel">
+                        CANCEL
+                    </div>
+                    <div class="button hidden" id="btn--confirm--user">
+                        CONFIRM
+                    </div>
+                    <div class="button mobile" id="btn--mobile--login">
+                        LOG IN
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container--nav no-log">
+            <nav>
+                <ul>
+                    <li class="logged">HOME</li>
+                    <li class="logged">MONTH</li>
+                    <li class="logged">NEW USER</li>
+                    <li class="logged">CATEGOTY</li>
+                    <li class="logged" id="log-out">LOG OUT</li>
+                    <li id="log-in">LOG IN</li>
+                </ul>
+            </nav>
+        </div>
+    </main>
+    <aside>
+
+    </aside>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../javascript/index.js"></script>
+</body>
+</html>

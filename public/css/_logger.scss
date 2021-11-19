@@ -1,0 +1,74 @@
+.folder--logger {
+    border: 5px solid $bright-blue;
+    border-radius: 2rem;
+    background: $console-blue;
+    color: $grey-white;
+
+    width: 50%;
+
+    justify-self: center;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+    
+    padding: 2px 5px;
+    .container-logger{
+        position: relative;
+        display: grid;
+    
+        width: 100%;
+        height: 100%;
+    
+        background: inherit;
+        grid-template-rows: 10% 5% 60% 5% 10%;
+        grid-template-columns: 100%;
+        border: 5px solid $bright-blue;
+        border-radius: 2rem;
+        .console--form {
+            display: grid;
+            position: relative;
+            grid-template-rows: repeat(4, 25%);
+            grid-template-columns: 50% 50%;
+            width: 100%;
+            gap: 5px;
+            padding: 10px 25px;
+            label {
+                align-self: center;
+            }
+            input {
+                padding: 5px 10px;
+            }
+            input, select {
+                background: $sature-blue;
+                outline: none;
+                align-self: center;
+                color: $grey-white;
+                width: 90%;
+                height: 50%;
+            }
+            
+        }
+        .console--btn-holder {
+            display: grid;
+            position: relative;
+
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            align-items: center;
+            margin-top: 20px;
+            .button {
+                position:  relative;
+                display: flex;
+
+                padding: 10px 15px;
+
+                font-weight: bold;
+                width: 70%;
+
+                justify-content: center;
+
+                cursor: pointer;
+            }
+        }
+    }
+}

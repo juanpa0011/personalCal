@@ -1,0 +1,93 @@
+.container--nav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+    justify-self: center;
+    justify-content: center;
+
+    width: 100%;
+    background: $console-blue;
+
+    border: 5px solid $bright-blue;
+    border-radius: 2rem;
+
+    padding: 2px 5px;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+    nav {
+        width: 100%;
+        background: $console-blue;
+
+        border: 5px solid $bright-blue;
+        border-radius: 2rem;
+        ul {
+            list-style: none;
+            display: grid;
+            flex-direction: row;
+            justify-items: center;
+            align-items: center;
+
+            grid-template-columns: repeat(5, 20%);
+            margin-top: 20px;
+            li {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 90%;
+                height: 50px;
+
+                font-weight: bold;
+
+                color: $grey-white;
+                background:  $sature-blue;
+
+                border-radius: 2rem;
+                margin: 0px 5px;
+
+                box-shadow: 0px 2px 15px $sature-blue;
+
+                cursor: pointer;
+                &:active {
+                    background: $console-blue;
+                }
+            }
+            #log-in {
+                visibility: hidden;
+                display: none;
+            }
+            #log-out {
+                background: $negative-red;
+                box-shadow: 0px 2px 15px $negative-red;
+                &:active {
+                    background: $console-blue;
+                }
+            }
+            
+        }
+    }
+}
+
+.no-log {
+    width: 25%;
+    nav {
+        width: 100%;
+        ul {
+            grid-template-columns: 1fr;
+            .logged {
+                visibility: hidden;
+                display: none;
+            }
+            #log-in {
+                visibility: visible;
+                display: flex;
+            }
+        }
+    }
+}
+
+#activeLi {
+    background: $bright-blue !important;
+}

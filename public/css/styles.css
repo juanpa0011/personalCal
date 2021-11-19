@@ -1,0 +1,701 @@
+main {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  background: #474C6F;
+  padding: 40px 20px;
+  gap: 10px;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: 80% 20%;
+      grid-template-rows: 80% 20%;
+}
+
+.container--nav {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  background: #0B1033;
+  border: 5px solid #1B3170;
+  border-radius: 2rem;
+  padding: 2px 5px;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.container--nav nav {
+  width: 100%;
+  background: #0B1033;
+  border: 5px solid #1B3170;
+  border-radius: 2rem;
+}
+
+.container--nav nav ul {
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: (20%)[5];
+      grid-template-columns: repeat(5, 20%);
+  margin-top: 20px;
+}
+
+.container--nav nav ul li {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  height: 50px;
+  font-weight: bold;
+  color: #CDD0CE;
+  background: #474C6F;
+  border-radius: 2rem;
+  margin: 0px 5px;
+  -webkit-box-shadow: 0px 2px 15px #474C6F;
+          box-shadow: 0px 2px 15px #474C6F;
+  cursor: pointer;
+}
+
+.container--nav nav ul li:active {
+  background: #0B1033;
+}
+
+.container--nav nav ul #log-in {
+  visibility: hidden;
+  display: none;
+}
+
+.container--nav nav ul #log-out {
+  background: #DD2D2D;
+  -webkit-box-shadow: 0px 2px 15px #DD2D2D;
+          box-shadow: 0px 2px 15px #DD2D2D;
+}
+
+.container--nav nav ul #log-out:active {
+  background: #0B1033;
+}
+
+.no-log {
+  width: 25%;
+}
+
+.no-log nav {
+  width: 100%;
+}
+
+.no-log nav ul {
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.no-log nav ul .logged {
+  visibility: hidden;
+  display: none;
+}
+
+.no-log nav ul #log-in {
+  visibility: visible;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#activeLi {
+  background: #1B3170 !important;
+}
+
+.folder {
+  border: 5px solid #1B3170;
+  border-radius: 2rem;
+  background: #0B1033;
+  color: #CDD0CE;
+  padding: 2px 5px;
+}
+
+.folder .container--register {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  -ms-grid-rows: 10% 5% 75%;
+      grid-template-rows: 10% 5% 75%;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  border: 5px solid #1B3170;
+  border-radius: 2rem;
+}
+
+.folder .container--register .register--title {
+  position: relative;
+  -ms-grid-row-align: center;
+      align-self: center;
+  padding: 5px 25px;
+  font-weight: bolder;
+  font-size: 26px;
+  color: #27CC69;
+  margin-top: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 10% 10% 10% 10% 10% 10%;
+      grid-template-columns: 40% 10% 10% 10% 10% 10% 10%;
+}
+
+.folder .container--register .register--title select {
+  margin: 5px 0px;
+  background: #474C6F;
+  color: #CDD0CE;
+}
+
+.folder .container--register .register--title label {
+  font-size: 12px;
+  color: #CDD0CE;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.folder .container--register .register--title #category_select {
+  -ms-grid-column: 4;
+      grid-column-start: 4;
+  grid-column-end: 6;
+}
+
+.folder .container--register .register {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 10% 90%;
+      grid-template-rows: 10% 90%;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  padding: 10px 25px;
+}
+
+.folder .container--register .register .table--header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 60% 20%;
+      grid-template-columns: 20% 60% 20%;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+  background: #474C6F;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  font-weight: bold;
+  border: #424242 solid 2px;
+}
+
+.folder .container--register .register .table--header p {
+  padding: 4px 4px;
+}
+
+.folder .container--register .register .register--scroll {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (10%)[auto-fill];
+      grid-template-rows: repeat(auto-fill, 10%);
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.folder .container--register .register .register--scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.folder .container--register .register .register--scroll .table--folder .table--operation {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  -ms-grid-columns: 20% 60% 20%;
+      grid-template-columns: 20% 60% 20%;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+  height: 100%;
+  background: #474C6F;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 5px;
+  font-size: 12px;
+}
+
+.console--border {
+  width: 90%;
+  height: 2px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background: #1B3170;
+  border-radius: 1rem;
+  border: #1B3170 2px solid;
+}
+
+.container--console {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border: 5px solid #1B3170;
+  border-radius: 2rem;
+  -ms-grid-rows: 10% 5% 60% 5% 10%;
+      grid-template-rows: 10% 5% 60% 5% 10%;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+}
+
+.console--header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-left: 25px;
+  margin-top: 15px;
+  font-weight: bolder;
+}
+
+.console--form {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  -ms-grid-rows: (25%)[4];
+      grid-template-rows: repeat(4, 25%);
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  gap: 5px;
+  padding: 15px 25px;
+}
+
+.console--form label {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.console--form input {
+  padding: 5px 10px;
+}
+
+.console--form input, .console--form select {
+  background: #474C6F;
+  outline: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: #CDD0CE;
+  width: 90%;
+  height: 50%;
+}
+
+.console--btn-holder {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+.console--btn-holder .button {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 15px;
+  font-weight: bold;
+  width: 70%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.console--btn-holder #btn--cancel {
+  background: #474C6F;
+  border: #474C6F 2px solid;
+  border-radius: 2rem;
+  -webkit-transition: 0.5s -webkit-box-shadow ease-in;
+  transition: 0.5s -webkit-box-shadow ease-in;
+  transition: 0.5s box-shadow ease-in;
+  transition: 0.5s box-shadow ease-in, 0.5s -webkit-box-shadow ease-in;
+}
+
+.console--btn-holder #btn--cancel:hover {
+  -webkit-box-shadow: 0px 2px 15px #474C6F;
+          box-shadow: 0px 2px 15px #474C6F;
+  -webkit-transition: 0.5s -webkit-box-shadow ease-in;
+  transition: 0.5s -webkit-box-shadow ease-in;
+  transition: 0.5s box-shadow ease-in;
+  transition: 0.5s box-shadow ease-in, 0.5s -webkit-box-shadow ease-in;
+}
+
+.console--btn-holder #btn--cancel:active {
+  background: #0B1033;
+}
+
+.console--btn-holder #btn--confirm--user, .console--btn-holder #btn--confirm--op {
+  background: green;
+  border: green 2px solid;
+  border-radius: 2rem;
+  -webkit-transition: 0.5s -webkit-box-shadow ease-in;
+  transition: 0.5s -webkit-box-shadow ease-in;
+  transition: 0.5s box-shadow ease-in;
+  transition: 0.5s box-shadow ease-in, 0.5s -webkit-box-shadow ease-in;
+}
+
+.console--btn-holder #btn--confirm--user:hover, .console--btn-holder #btn--confirm--op:hover {
+  -webkit-box-shadow: 0px 2px 15px green;
+          box-shadow: 0px 2px 15px green;
+  -webkit-transition: 0.5s -webkit-box-shadow ease-in;
+  transition: 0.5s -webkit-box-shadow ease-in;
+  transition: 0.5s box-shadow ease-in;
+  transition: 0.5s box-shadow ease-in, 0.5s -webkit-box-shadow ease-in;
+}
+
+.console--btn-holder #btn--confirm--user:active, .console--btn-holder #btn--confirm--op:active {
+  background: #0B1033;
+}
+
+.console--btn-holder #btn--delete {
+  background: red;
+  border: red 2px solid;
+  border-radius: 2rem;
+  -webkit-transition: 0.5s -webkit-box-shadow ease-in;
+  transition: 0.5s -webkit-box-shadow ease-in;
+  transition: 0.5s box-shadow ease-in;
+  transition: 0.5s box-shadow ease-in, 0.5s -webkit-box-shadow ease-in;
+}
+
+.console--btn-holder #btn--delete:hover {
+  -webkit-box-shadow: 0px 2px 15px red;
+          box-shadow: 0px 2px 15px red;
+  -webkit-transition: 0.5s -webkit-box-shadow ease-in;
+  transition: 0.5s -webkit-box-shadow ease-in;
+  transition: 0.5s box-shadow ease-in;
+  transition: 0.5s box-shadow ease-in, 0.5s -webkit-box-shadow ease-in;
+}
+
+.console--btn-holder #btn--delete:active {
+  background: #0B1033;
+}
+
+.INCOME {
+  color: #27CC69;
+  text-shadow: 0px 2px 15px #27CC69;
+}
+
+.EXPENSES {
+  color: #DD2D2D;
+  text-shadow: 0px 2px 15px #DD2D2D;
+}
+
+.NONE {
+  color: #CDD0CE;
+  text-shadow: 0px 2px 15px #CDD0CE;
+}
+
+.folder--logger {
+  border: 5px solid #1B3170;
+  border-radius: 2rem;
+  background: #0B1033;
+  color: #CDD0CE;
+  width: 50%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  padding: 2px 5px;
+}
+
+.folder--logger .container-logger {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  -ms-grid-rows: 10% 5% 60% 5% 10%;
+      grid-template-rows: 10% 5% 60% 5% 10%;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  border: 5px solid #1B3170;
+  border-radius: 2rem;
+}
+
+.folder--logger .container-logger .console--form {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  -ms-grid-rows: (25%)[4];
+      grid-template-rows: repeat(4, 25%);
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  width: 100%;
+  gap: 5px;
+  padding: 10px 25px;
+}
+
+.folder--logger .container-logger .console--form label {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.folder--logger .container-logger .console--form input {
+  padding: 5px 10px;
+}
+
+.folder--logger .container-logger .console--form input, .folder--logger .container-logger .console--form select {
+  background: #474C6F;
+  outline: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: #CDD0CE;
+  width: 90%;
+  height: 50%;
+}
+
+.folder--logger .container-logger .console--btn-holder {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+.folder--logger .container-logger .console--btn-holder .button {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 15px;
+  font-weight: bold;
+  width: 70%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  body {
+    width: 100%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body aside {
+    visibility: hidden;
+    display: none;
+  }
+  body main {
+    position: relative;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-grid-row-align: center;
+        align-self: center;
+    width: 100%;
+    height: 100vh;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 4;
+    -ms-grid-rows: 45% 45% 10%;
+        grid-template-rows: 45% 45% 10%;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    padding: 40px 25px 0px 15px;
+  }
+  body main .folder--logger {
+    width: 100%;
+  }
+  body main #mobile--menu {
+    position: absolute;
+    visibility: hidden;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    right: 0px;
+    z-index: 50;
+  }
+  body main .mobile--nav {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    justify-items: center;
+    background: #0B1033;
+    border: 3px #1B3170 solid;
+    width: 50px;
+    height: 50px;
+    right: 0px;
+    z-index: 50;
+  }
+  body main .mobile--nav span {
+    position: inherit;
+    display: inline-block;
+    content: "";
+    width: 30px;
+    height: 2px;
+    background: #CDD0CE;
+    z-index: 5;
+    margin-left: 7px;
+  }
+  body main .mobile--nav span::before, body main .mobile--nav span::after {
+    content: "";
+    position: inherit;
+    display: inline-block;
+    background: inherit;
+    width: inherit;
+    height: inherit;
+  }
+  body main .mobile--nav span::before {
+    top: -10px;
+  }
+  body main .mobile--nav span::after {
+    bottom: -10px;
+  }
+  body .container--nav {
+    display: none;
+  }
+  .mobile {
+    visibility: visible;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #btn--mobile--login {
+    background: red;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    grid-row-end: 1;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 5;
+  }
+}
+
+ul {
+  position: absolute;
+  display: inline-block;
+  content: '';
+  width: 100%;
+  height: 100vh;
+  padding-top: 100px;
+  background: black;
+  z-index: 10;
+  list-style: none;
+}
+
+ul li {
+  text-align: center;
+  color: #CDD0CE;
+  font-weight: bold;
+  border: 3px solid #1B3170;
+  margin: 0px 25%;
+  margin-bottom: 20px;
+  border-radius: 1rem;
+  padding: 5px;
+  background: #474C6F;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5% 90% 5%;
+      grid-template-columns: 5% 90% 5%;
+}
+
+aside {
+  height: 100vh;
+  background: #474C6F;
+}
+
+.hidden {
+  visibility: hidden;
+  display: none;
+}
+
+.mobile {
+  visibility: hidden;
+  display: none;
+}
+/*# sourceMappingURL=styles.css.map */

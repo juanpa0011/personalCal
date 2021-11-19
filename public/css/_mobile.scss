@@ -1,0 +1,121 @@
+@media (max-width: 1000px) {
+    
+    body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        aside {
+            visibility: hidden;
+            display: none;
+        }
+        main {
+            position: relative;
+            display: grid;
+
+            justify-self: center;
+            align-self: center;
+
+            width: 100%;
+            height: 100vh;
+
+            grid-column-start: 1;
+            grid-column-end: 4;
+
+            grid-template-rows: 45% 45% 10%;
+            grid-template-columns: 100%;
+            
+            padding: 40px 25px 0px 15px; // Perfect measurements for MotoG4
+
+            .folder--logger {
+                width: 100%;
+            }
+            #mobile--menu {
+                position: absolute;
+                visibility: hidden;
+                cursor: pointer;
+                width: 50px;
+                height: 50px;
+                right: 0px;
+                z-index: 50;
+            }
+            .mobile--nav{
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                justify-items: center;
+                background: $console-blue;
+                border: 3px $bright-blue solid;
+                width: 50px;
+                height: 50px;
+                right: 0px;
+                z-index: 50;
+                span {
+                    position: inherit;
+                    display: inline-block;
+                    content: "";
+                    width: 30px;
+                    height: 2px;
+                    background: $grey-white;
+                    z-index: 5;
+                    margin-left: 7px;
+                    &::before, &::after {
+                        content: "";
+                        position: inherit;
+                        display: inline-block;
+                        background: inherit;
+                        width: inherit;
+                        height: inherit;
+                    }
+                    &::before {
+                        top:  -10px;
+                    }
+                    &::after {
+                        bottom: -10px;
+                    }
+                }
+            }
+        }
+        .container--nav {
+            display: none;
+        }
+    }
+
+    .mobile {
+        visibility: visible;
+        display: flex;
+    }
+
+    #btn--mobile--login {
+        background: red;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+}
+
+ul {
+    position: absolute;
+    display: inline-block;
+    content:  '';
+    width: 100%;
+    height: 100vh;
+    padding-top: 100px;
+    background: black;
+    z-index: 10;
+    list-style: none;
+    li {
+        text-align: center;
+        color: $grey-white;
+        font-weight: bold;
+        border: 3px solid $bright-blue;
+        margin: 0px 25%;
+        margin-bottom: 20px;
+        border-radius: 1rem;
+        padding: 5px;
+        background: $sature-blue;
+    }
+}

@@ -1,0 +1,241 @@
+.folder {
+    border: 5px solid $bright-blue;
+    border-radius: 2rem;
+    background: $console-blue;
+    color: $grey-white;
+    
+    padding: 2px 5px;
+    .container--register {
+        position: relative;
+        display: grid;
+    
+        width: 100%;
+        height: 100%;
+    
+        background: inherit;
+        grid-template-rows: 10% 5% 75%;
+        grid-template-columns: 100%;
+        border: 5px solid $bright-blue;
+        border-radius: 2rem;
+        .register--title {
+            position: relative;
+            align-self: center;
+            padding: 5px 25px;
+            font-weight: bolder;
+            font-size: 26px;
+            color: $positive-green;
+            margin-top: 20px;
+
+            display: grid;
+
+            grid-template-columns: 40% 10% 10% 10% 10% 10% 10%;
+
+        
+            select {
+                margin: 5px 0px;
+                background: $sature-blue;
+                color: $grey-white;
+            }
+            label {
+                font-size: 12px;
+                color: $grey-white;
+                justify-self: center;
+                align-self: center;
+            }
+            #category_select {
+                grid-column-start: 4;
+                grid-column-end: 6;
+            }
+        }
+        .register {
+            position: relative;
+            display: grid;
+
+            grid-template-rows: 10% 90%;
+            grid-template-columns: 100%;
+
+            padding: 10px 25px;
+
+
+            .table--header {
+                display: grid;
+                grid-template-columns: 20% 60% 20%;
+                grid-template-rows: 100%;
+                background: $sature-blue;
+                align-content: center;
+                font-weight: bold;
+                border: rgb(66, 66, 66) solid 2px;
+                p{
+                    padding:  4px 4px;
+                }
+            }
+
+            .register--scroll {
+                position: relative;
+                display: grid;
+
+                grid-template-rows: repeat(auto-fill, 10%);
+                grid-template-columns: 100%;
+
+                width: 100%;
+                height: 100%;
+
+                overflow-y: scroll;
+                scroll-behavior: smooth;
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+
+                .table--folder {
+                    .table--operation {
+                        display: grid;
+                        position: relative;
+                        grid-template-columns: 20% 60% 20%;
+                        grid-template-rows: 100%;
+                        height: 100%;
+                        background: $sature-blue;
+                        align-items: center;
+                        padding: 5px 5px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.console--border{
+    width: 90%;
+    height: 2px;
+
+    justify-self: center;
+    align-self: center;
+    background: $bright-blue;
+    border-radius: 1rem;
+    border: $bright-blue 2px solid;
+}
+
+.container--console{
+        position: relative;
+        display: grid;
+    
+        width: 100%;
+        height: 100%;
+    
+        background: inherit;
+        border: 5px solid $bright-blue;
+        border-radius: 2rem;
+
+        grid-template-rows: 10% 5% 60% 5% 10%;
+        grid-template-columns: 100%;
+}
+
+        .console--header {
+            display: flex;
+            align-self: center;
+            margin-left: 25px;
+            margin-top: 15px;
+            font-weight: bolder;
+        }
+        .console--form {
+            display: grid;
+            position: relative;
+            grid-template-rows: repeat(4, 25%);
+            grid-template-columns: 50% 50%;
+            gap: 5px;
+            padding: 15px 25px;
+            label {
+                align-self: center;
+            }
+            input {
+                padding: 5px 10px;
+            }
+            input, select {
+                background: $sature-blue;
+                outline: none;
+                align-self: center;
+                color: $grey-white;
+                width: 90%;
+                height: 50%;
+            }
+            
+        }
+        .console--btn-holder {
+            display: grid;
+            position: relative;
+
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 100%;
+            justify-items: center;
+            align-items: center;
+            margin-top: 20px;
+            .button {
+                position:  relative;
+                display: flex;
+
+                padding: 10px 15px;
+
+                font-weight: bold;
+                width: 70%;
+
+                justify-content: center;
+
+                cursor: pointer;
+            }
+            #btn--cancel {
+                background: $sature-blue;
+                border: $sature-blue 2px solid;
+                border-radius: 2rem;
+                transition: 0.5s box-shadow ease-in;
+                &:hover {
+                    box-shadow: 0px 2px 15px $sature-blue;
+                    transition: 0.5s box-shadow ease-in;
+                }
+                &:active {
+                    background: $console-blue;
+                }
+            }
+            #btn--confirm--user, #btn--confirm--op  {
+                background: green;
+                border: green 2px solid;
+                border-radius: 2rem;
+                transition: 0.5s box-shadow ease-in;
+                &:hover {
+                    box-shadow: 0px 2px 15px green;
+                    transition: 0.5s box-shadow ease-in;
+                }
+                &:active {
+                    background: $console-blue;
+                }
+            }
+            #btn--delete {
+                background: red;
+                border: red 2px solid;
+                border-radius: 2rem;
+                transition: 0.5s box-shadow ease-in;
+                &:hover {
+                    box-shadow: 0px 2px 15px red;
+                    transition: 0.5s box-shadow ease-in;
+                }
+                &:active {
+                    background: $console-blue;
+                }
+            }
+        }
+
+        .INCOME {
+            color: $positive-green;
+            text-shadow: 0px 2px 15px $positive-green;
+        }
+        .EXPENSES {
+            color: $negative-red;
+            text-shadow: 0px 2px 15px $negative-red;
+        }
+        .NONE {
+            color: $grey-white;
+            text-shadow: 0px 2px 15px $grey-white;
+        }
