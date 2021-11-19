@@ -14,15 +14,14 @@
 
     </aside>
     <main>
-        <input type="checkbox" name="menu" id="mobile--menu">
-        <label name="menu" class="mobile--nav">
+        <label name="menu" class="mobile--nav mobile">
             <span></span>
         </label>
-        <ul>
-                <li class="logged">HOME</li>
-                <li class="logged">MONTH</li>
-                <li class="logged">NEW USER</li>
-                <li class="logged">LOG OUT</li>
+        <ul class="mobile--ul hidden">
+                <li class="hidden">HOME</li>
+                <li class="hidden">MONTH</li>
+                <li class="hidden">NEW USER</li>
+                <li class="hidden">LOG OUT</li>
                 <li>LOG IN</li>
         </ul>
         <div class="folder hidden">
@@ -154,7 +153,7 @@
         <div class="folder--logger">
             <div class="container-logger">
                 <div class="console--header">
-                    <p>ADD NEW USER</p>
+                    <p>WELCOME USER</p>
                 </div>
                 <div class="console--border"></div>
                 <div class="console--form">
@@ -203,6 +202,8 @@
     </aside>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../javascript/dom.js"></script>
+    <script src="../javascript/mobile.js"></script>
     <script src="../javascript/index.js"></script>
 </body>
 </html>

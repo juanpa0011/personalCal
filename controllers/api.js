@@ -68,11 +68,12 @@ const postOperationSearchDate = (req, res) => {
             }
         })
     } else {
-        let realDay = min_D + 1;
-        const SQLSentence = `SELECT * FROM operations WHERE time = '${min_Y}-${min_M}-${realDay}' ORDER BY time DESC`
+        let realMonth = min_M;
+        const SQLSentence = `SELECT * FROM operations WHERE time BETWEEN '${min_Y}-${realMonth}-${min_D}' AND '${max_Y}-${realMonth}-${max_D}' ORDER BY time DESC`
         DB.query(SQLSentence, (err, row) => {
             if(err) {
                 console.log(err)
+                
             } else {
                 res.send(row);
             }

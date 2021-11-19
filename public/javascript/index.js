@@ -1,41 +1,3 @@
-//const { parse } = require("dotenv");
-
-const doubleConsole = document.getElementsByClassName('folder'); // Console 1 and 2
-const logger = document.getElementsByClassName('folder--logger')[0];
-const containerNav = document.getElementsByClassName('container--nav')[0];
-
-const register = document.getElementsByClassName('register--scroll')[0]
-
-const ulList = document.getElementsByTagName('ul')[0];
-
-
-const btnConfirm = document.getElementById('btn--confirm--op');
-const btnConfirmUser = document.getElementById('btn--confirm--user');
-const btnCancel = document.getElementById('btn--cancel');
-const btnDelete = document.getElementById('btn--delete');
-
-const register_header = document.getElementsByClassName('register--title')[0];
-
-const input_category = document.getElementById('input_category');
-const input_type = document.getElementById('input_type');
-
-const day = document.getElementById('day_select');
-const month = document.getElementById('month_select');
-const year = document.getElementById('year_select'); 
-
-const categorySelect = document.getElementById('category_select');
-
-const loggerForm = document.getElementsByClassName('container-logger')[0].getElementsByClassName('console--form')[0];
-
-// URLs
-
-const URLOperations = 'http://localhost:3000/operation'; 
-const URLAllOperations = 'http://localhost:3000/operation/all';
-const URLTimeOperations = 'http://localhost:3000/operation/time';
-const URLCategoryOperations = 'http://localhost:3000/operation/category';
-const URLRegisterUser = 'http://localhost:3000/register';
-const URLLoginUser = 'http://localhost:3000/login';
-
 // UL - configurate Nav Buttons array
 
 function ulEventListener() {
@@ -50,6 +12,8 @@ function ulEventListener() {
         logger.classList.add('hidden');
         doubleConsole[0].classList.remove('hidden');
         doubleConsole[1].classList.remove('hidden');
+
+        activeLI(home, month, newUser, category)
 
         let labelCat = register_header.getElementsByTagName('label')[0];
         let selectCat = register_header.getElementsByTagName('select')[0];
@@ -74,15 +38,15 @@ function ulEventListener() {
         home.setAttribute('id', 'activeLi');
 
         clearRegister();
-        setTimeout(() => {
-            defaultAxion();
-        }, 1000);
+        defaultAxion();
     })
 
     month.addEventListener('click', () => {
         logger.classList.add('hidden');
         doubleConsole[0].classList.remove('hidden');
         doubleConsole[1].classList.remove('hidden');
+
+        activeLI(month, home, newUser, category)
 
         let labelCat = register_header.getElementsByTagName('label')[0];
         let selectCat = register_header.getElementsByTagName('select')[0];
@@ -116,6 +80,8 @@ function ulEventListener() {
         doubleConsole[0].classList.remove('hidden');
         doubleConsole[1].classList.remove('hidden');
 
+        activeLI(category, home, month, newUser)
+
         let labelCat = register_header.getElementsByTagName('label')[0];
         let selectCat = register_header.getElementsByTagName('select')[0];
 
@@ -148,6 +114,8 @@ function ulEventListener() {
         doubleConsole[0].classList.add('hidden');
         doubleConsole[1].classList.add('hidden');
         btnConfirmUser.classList.remove('hidden');
+
+        activeLI(newUser, home, month, category)
 
         let emailValue = loggerForm.getElementsByTagName('input')[0];
         let REemailValue = loggerForm.getElementsByTagName('input')[1];
@@ -255,6 +223,15 @@ function ulEventListener() {
 }
 
 // Functions for Register
+
+function activeLI(activeLI, noActive1, noActive2, noActive3) {
+
+    activeLI.setAttribute('id', 'activeLi');
+    noActive1.setAttribute('id', '');
+    noActive2.setAttribute('id', '');
+    noActive3.setAttribute('id', '');
+
+}
 
 function buildRegister(data) {
     for (let index = 0; index < data.length; index++) {
@@ -589,6 +566,7 @@ function putAxion(amount, id, category, concept) {
             id: id
         }
     }).then(res => {
+        defaultAxion()
     }).catch (err => {
         console.log(err);
     })

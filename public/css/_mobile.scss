@@ -61,6 +61,7 @@
                     background: $grey-white;
                     z-index: 5;
                     margin-left: 7px;
+                    transition: 0.5s transform;
                     &::before, &::after {
                         content: "";
                         position: inherit;
@@ -68,6 +69,7 @@
                         background: inherit;
                         width: inherit;
                         height: inherit;
+                        transition: 0.5s transform;
                     }
                     &::before {
                         top:  -10px;
@@ -89,33 +91,53 @@
     }
 
     #btn--mobile--login {
+        content: "AAAAAAAAAAAAAAA";
+        color: white;
+        position: relative;
+        display: inline-block;
+        width: 200px;
+        height: 100px;
         background: red;
         grid-row-start: 1;
         grid-row-end: 1;
         grid-column-start: 1;
         grid-column-end: 5;
     }
-}
-
-ul {
-    position: absolute;
-    display: inline-block;
-    content:  '';
-    width: 100%;
-    height: 100vh;
-    padding-top: 100px;
-    background: black;
-    z-index: 10;
-    list-style: none;
-    li {
-        text-align: center;
-        color: $grey-white;
-        font-weight: bold;
-        border: 3px solid $bright-blue;
-        margin: 0px 25%;
-        margin-bottom: 20px;
-        border-radius: 1rem;
-        padding: 5px;
-        background: $sature-blue;
+    ul {
+        position: absolute;
+        display: inline-block;
+        content:  '';
+        width: 100%;
+        height: 100vh;
+        padding-top: 100px;
+        background: rgba($console-blue, 0.5);
+        z-index: 10;
+        list-style: none;
+        li {
+            text-align: center;
+            color: $grey-white;
+            font-weight: bold;
+            border: 3px solid $bright-blue;
+            margin: 0px 25%;
+            margin-bottom: 20px;
+            border-radius: 1rem;
+            padding: 5px;
+            background: $sature-blue;
+        }
+    }
+    .cross {
+        background: transparent !important;
+        &::before{
+            background: $grey-white !important;
+            margin-top: 10px;
+            transform: rotate(45deg);
+            transition: 0.5s transform;
+        }
+        &::after {
+            background: $grey-white !important;
+            margin-bottom: 10px;
+            transform: rotate(-45deg);
+            transition: 0.5s transform;
+        }
     }
 }
