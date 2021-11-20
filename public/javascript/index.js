@@ -299,31 +299,31 @@ function adjustTime(time) {
     return time;
 }
 
-function addYeartoSelector(year) {
-    let selector = register_header.getElementsByTagName('select')[3];
-    let arrayOptions = selector.getElementsByTagName('option');
-
+function addYeartoSelector(newYear) {
+    let arrayOptions = year.getElementsByTagName('option');
+    
     while (arrayOptions.length != 0) {
         for (let index = 0; index < arrayOptions.length; index++) {
-            if (arrayOptions[index].value == year) {
+            if (arrayOptions[index].value == newYear) {
                 return; // EXIT IF YEAR INSIDE SELECT == TO NEW YEAR OF OPERATION
             }
-            let newYear = document.createElement('option');
-            newYear.innerText = year;
-            newYear.value = year;
-
-            selector.appendChild(newYear);
-            return;
         }
+        
+        let optionYear = document.createElement('option');
+        optionYear.innerText = newYear;
+        optionYear.value = newYear;
+        selectYear.appendChild(optionYear);
+        year.appendChild(optionYear);
+        return; // EXIT AFTER ADDING UNKNOWN YEAR TO SELECT, BREAKING WHILE.
     }
 
     if (arrayOptions.length == 0) {
-        let newYear = document.createElement('option');
-        newYear.innerText = year;
-        newYear.value = year;
-
-        selector.appendChild(newYear);
-        return;
+        let optionYear = document.createElement('option');
+        optionYear.innerText = newYear;
+        optionYear.value = newYear;
+        selectYear.appendChild(optionYear);
+        year.appendChild(optionYear);
+        return; // INIT SELECT
     }
 }
 
@@ -395,15 +395,15 @@ categorySelect.addEventListener('change', () => {
 })
 
 day.addEventListener('change', () => {
-    timeAxion();
+    timeAxion(year.value, month.value, day.value);
 })
 
 month.addEventListener('change', () => {
-    timeAxion();
+    timeAxion(year.value, month.value, day.value);
 })
 
 year.addEventListener('change', () => {
-    timeAxion();
+    timeAxion(year.value, month.value, day.value);
 })
 
 input_type.addEventListener('change', () => {
@@ -589,25 +589,25 @@ function deleteAxion(id) {
         console.log(err);
     })
 }
-function timeAxion() {
+function timeAxion(year, month, day) {
 
     let min_D = 0;
     let max_D = 0;
     let min_M = 0
     let max_M = 0
-    let max_Y = year.value
-    let min_Y = year.value
+    let max_Y = year
+    let min_Y = year
 
-    if (day.value == 0) {
+    if (day == 0) {
         min_D = 31;
         max_D = 1;
-        min_M = parseInt(month.value) -1;
-        max_M = parseInt(month.value) +1;
+        min_M = parseInt(month) -1;
+        max_M = parseInt(month) +1;
     } else {
-        min_D = parseInt(day.value) -1;
-        max_D = parseInt(day.value) +1;
-        min_M = parseInt(month.value);
-        max_M = parseInt(month.value);
+        min_D = parseInt(day) -1;
+        max_D = parseInt(day) +1;
+        min_M = parseInt(month);
+        max_M = parseInt(month);
     }
 
     if (min_M == 0) {

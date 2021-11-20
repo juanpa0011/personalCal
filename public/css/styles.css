@@ -569,6 +569,26 @@ main {
   body main .folder--logger {
     width: 100%;
   }
+  body main .folder--logger .container-logger #btn--mobile--login {
+    color: #CDD0CE;
+    position: relative;
+    display: inline-block;
+    visibility: initial;
+    text-align: center;
+    background: #474C6F;
+    border: 3px solid #1B3170;
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
+    padding: 10px 0px 20px 0px;
+    border-radius: 1rem;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    grid-row-end: 1;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 5;
+  }
   body main #mobile--menu {
     position: absolute;
     visibility: hidden;
@@ -583,6 +603,7 @@ main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    visibility: visible;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -632,20 +653,92 @@ main {
   body main .mobile--nav span::after {
     bottom: -10px;
   }
-  body .container--nav {
-    display: none;
+  body main .folder .container--register {
+    -ms-grid-rows: 10% 5% 70% 5%;
+        grid-template-rows: 10% 5% 70% 5%;
   }
-  .mobile {
-    visibility: visible;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  body main .folder .container--register .register--mobile-class {
+    position: relative;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 15% 15% 15% 15% 15% 15%;
+        grid-template-columns: 15% 15% 15% 15% 15% 15%;
+    width: 100%;
+    height: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  #btn--mobile--login {
-    content: "AAAAAAAAAAAAAAA";
+  body main .folder .container--register .register--mobile-class label {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    color: #CDD0CE;
+    font-size: 12px;
+  }
+  body main .folder .container--register .register--mobile-class input, body main .folder .container--register .register--mobile-class select {
+    background: #474C6F;
+    color: #CDD0CE;
+    height: 100%;
+    font-size: 12px;
+  }
+  body main .folder .container--register .register--title {
+    -ms-grid-columns: 28% 14% 18% 9% 11% 10% 15%;
+        grid-template-columns: 28% 14% 18% 9% 11% 10% 15%;
+  }
+  body main .folder .container--register .register--title p {
+    font-size: 14px;
+  }
+  body main .folder .container--register .register--title label {
+    font-size: 10px;
+  }
+  body main .folder .container--register .register--title select {
+    font-size: 10px;
+    scrollbar-width: thin;
+  }
+  body main .folder .container--register .register {
+    padding: 3px 5px;
+  }
+  body main .folder .container--register .register .table--header {
+    display: -ms-grid;
+    display: grid;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-grid-columns: 20% 50% 30%;
+        grid-template-columns: 20% 50% 30%;
+  }
+  body main .folder .container--register .register .table--header p {
+    padding: 0px 2px;
+    font-size: 12px;
+  }
+  body main .folder .container--register .register .register--scroll p {
+    font-size: 10px;
+  }
+  body main .folder .container--register .register .register--scroll .table--folder .table--operation {
+    -ms-grid-columns: 20% 50% 30%;
+        grid-template-columns: 20% 50% 30%;
+  }
+  body main .folder .console--form label {
+    font-size: 12px;
+  }
+  body main .folder .console--form input, body main .folder .console--form select {
+    height: 100%;
+    font-size: 12px;
+  }
+  body main .folder .console--btn-holder .button {
+    font-size: 14px;
+  }
+  body main .folder .console--btn-holder #btn--mobile--login {
+    content: "";
     color: white;
     position: relative;
     display: inline-block;
+    visibility: initial;
     width: 200px;
     height: 100px;
     background: red;
@@ -655,6 +748,15 @@ main {
     -ms-grid-column: 1;
         grid-column-start: 1;
     grid-column-end: 5;
+  }
+  body .container--nav {
+    display: none;
+  }
+  .mobile {
+    visibility: visible;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   ul {
     position: absolute;
@@ -729,7 +831,7 @@ aside {
   display: none;
 }
 
-.mobile {
+.mobile--nav, #btn--mobile--login {
   visibility: hidden;
   display: none;
 }

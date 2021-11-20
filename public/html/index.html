@@ -14,13 +14,14 @@
 
     </aside>
     <main>
-        <label name="menu" class="mobile--nav mobile">
+        <label name="menu" class="mobile--nav">
             <span></span>
         </label>
         <ul class="mobile--ul hidden">
                 <li class="hidden">HOME</li>
                 <li class="hidden">MONTH</li>
                 <li class="hidden">NEW USER</li>
+                <li class="hidden">CATEGORY</li>
                 <li class="hidden">LOG OUT</li>
                 <li>LOG IN</li>
         </ul>
@@ -53,7 +54,7 @@
                         <option value="12">DEC</option>
                     </select>
                     <label class="hidden" for="day">Day</label>
-                    <select class="hidden" name="day" id="day_select">
+                    <select class="hidden" size="1" name="day" id="day_select">
                         <option value="0">ALL</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -104,6 +105,61 @@
 
                         </div>
                 </div>
+                <div class="register--mobile-class">
+                    <label class="hidden" for="month_mobile">Month</label>
+                    <select class="hidden" name="month" id="month_select_mobile">
+                        <option value="1">JAN</option>
+                        <option value="2">FEB</option>
+                        <option value="3">MAR</option>
+                        <option value="4">APR</option>
+                        <option value="5">MAY</option>
+                        <option value="6">JUN</option>
+                        <option value="7">JUL</option>
+                        <option value="8">AUG</option>
+                        <option value="9">SEP</option>
+                        <option value="10">OCT</option>
+                        <option value="11">NOV</option>
+                        <option value="12">DEC</option>
+                    </select>
+                    <label class="hidden" for="day_mobile">Day</label>
+                    <select class="hidden" size="1" name="day" id="day_select_mobile">
+                        <option value="0">ALL</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                    <label class="hidden" for="year_mobile">Year</label>
+                    <select class="hidden" name="year" id="year_select_mobile">
+                    </select>
+                </div>
             </div>
         </div>
         <div class="folder hidden">
@@ -153,7 +209,7 @@
         <div class="folder--logger">
             <div class="container-logger">
                 <div class="console--header">
-                    <p>WELCOME USER</p>
+                    <p id="logger--title">WELCOME USER</p>
                 </div>
                 <div class="console--border"></div>
                 <div class="console--form">
@@ -178,9 +234,7 @@
                     <div class="button hidden" id="btn--confirm--user">
                         CONFIRM
                     </div>
-                    <div class="button mobile" id="btn--mobile--login">
-                        LOG IN
-                    </div>
+                    <div class="button mobile" id="btn--mobile--login">LOG IN</div>
                 </div>
             </div>
         </div>

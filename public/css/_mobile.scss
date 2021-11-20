@@ -1,5 +1,4 @@
 @media (max-width: 1000px) {
-    
     body {
         width: 100%;
         height: 100vh;
@@ -29,6 +28,35 @@
 
             .folder--logger {
                 width: 100%;
+                .container-logger {
+                    #btn--mobile--login {
+                        color: $grey-white;
+
+                        position: relative;
+                        display: inline-block;
+                        visibility: initial;
+                        text-align: center;
+
+                        background: $sature-blue;
+                        border: 3px solid $bright-blue ;
+
+                        width: 80px;
+                        height: 30px;
+                        font-size: 12px;
+                        padding: 10px 0px 20px 0px;
+                        border-radius: 1rem;
+
+                        grid-row-start: 1;
+                        grid-row-end: 1;
+                        grid-column-start: 1;
+                        grid-column-end: 5;
+                    }
+                    .console--btn-holder {
+                        #btn--confirm--user {
+                            
+                        }
+                    }
+                }
             }
             #mobile--menu {
                 position: absolute;
@@ -42,6 +70,7 @@
             .mobile--nav{
                 position: absolute;
                 display: flex;
+                visibility: visible;
                 flex-direction: column;
                 justify-content: center;
                 align-content: center;
@@ -79,6 +108,95 @@
                     }
                 }
             }
+            .folder {
+                .container--register {
+                    grid-template-rows: 10% 5% 70% 5%;
+                    .register--mobile-class{
+                        position: relative;
+                        display: grid;
+                        grid-template-columns: 15% 15% 15% 15% 15% 15%;
+                        width: 100%;
+                        height: 100%;
+                        justify-content: center;
+                        label {
+                            justify-self: center;
+                            align-self: center;
+                            color: $grey-white;
+                            font-size: 12px;
+                        }
+                        input, select {
+                            background: $sature-blue;
+                            color: $grey-white;
+                            height: 100%;
+                            font-size: 12px;
+                        }
+                    }
+                    .register--title {
+                        grid-template-columns: 28% 14% 18% 9% 11% 10% 15%;
+                        p {
+                            font-size: 14px;
+                        }
+                        label {
+                            font-size: 10px;
+                        }
+                        select {
+                            font-size: 10px;
+                            scrollbar-width: thin;
+                        }
+                    }
+                    .register {
+                        padding: 3px 5px;
+                        .table--header {
+                            display: grid;
+                            align-content: flex-start;
+                            align-items: flex-start;
+                            grid-template-columns: 20% 50% 30%;
+                            p {
+                                padding: 0px 2px;
+                                font-size: 12px;
+                            }
+                        }
+                        .register--scroll {
+                            p {
+                                font-size: 10px;
+                            }
+                            .table--folder {
+                                .table--operation {
+                                    grid-template-columns: 20% 50% 30%;
+                                }
+                            }
+                        }
+                    }
+                }
+                .console--form {
+                    label {
+                        font-size: 12px;
+                    }
+                    input, select {
+                        height: 100%;
+                        font-size: 12px;
+                    }
+                }
+                .console--btn-holder {
+                    .button {
+                        font-size: 14px;
+                    }
+                    #btn--mobile--login {
+                        content: "";
+                        color: white;
+                        position: relative;
+                        display: inline-block;
+                        visibility: initial;
+                        width: 200px;
+                        height: 100px;
+                        background: red;
+                        grid-row-start: 1;
+                        grid-row-end: 1;
+                        grid-column-start: 1;
+                        grid-column-end: 5;
+                    }
+                }
+            }
         }
         .container--nav {
             display: none;
@@ -88,20 +206,6 @@
     .mobile {
         visibility: visible;
         display: flex;
-    }
-
-    #btn--mobile--login {
-        content: "AAAAAAAAAAAAAAA";
-        color: white;
-        position: relative;
-        display: inline-block;
-        width: 200px;
-        height: 100px;
-        background: red;
-        grid-row-start: 1;
-        grid-row-end: 1;
-        grid-column-start: 1;
-        grid-column-end: 5;
     }
     ul {
         position: absolute;
