@@ -12,7 +12,7 @@ const userExist = (req, res, next) => {
             console.log(err);
         } else {
             if(row.length < 1) {
-                return res.send("Email does not exist").status(409);
+                return res.send("Email does not exist");
             }
             next();
         }
@@ -43,7 +43,7 @@ const queryPassword = (req, res, next) => {
             console.log(err)
         } else {
             if (!bcrypt.compareSync(password, row[0].password)) {
-                return res.send("Password is not valid").status(409);
+                return res.send("Password is not valid");
             }
             next();
         }

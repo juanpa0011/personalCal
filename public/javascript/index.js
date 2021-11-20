@@ -116,6 +116,7 @@ function ulEventListener() {
         btnConfirmUser.classList.remove('hidden');
 
         activeLI(newUser, home, month, category)
+        consoleHeader.innerText = "ADD NEW USER";
 
         let emailValue = loggerForm.getElementsByTagName('input')[0];
         let REemailValue = loggerForm.getElementsByTagName('input')[1];
@@ -154,7 +155,15 @@ function ulEventListener() {
                 password: passwordValue
             }
         }).then(res => {
-            localStorage.setItem('token', `Bearer ${res.data.authorized}`);
+            if (res.data == "Email does not exist") {
+                alert("The Email does not exist.");
+                return;
+            }
+            if (res.data == "Password is not valid") {
+                alert("The password does not match the email");
+                return;
+            }
+        localStorage.setItem('token', `Bearer ${res.data.authorized}`);
 
         containerNav.classList.remove('no-log');
         logger.classList.add('hidden');
@@ -197,6 +206,8 @@ function ulEventListener() {
         doubleConsole[0].classList.add('hidden');
         doubleConsole[1].classList.add('hidden');
         btnConfirmUser.classList.add('hidden');
+
+        consoleHeader.innerText = "WELCOME USER";
 
         let emailValue = loggerForm.getElementsByTagName('input')[0];
         let REemailValue = loggerForm.getElementsByTagName('input')[1];
@@ -309,19 +320,33 @@ function addYeartoSelector(newYear) {
             }
         }
         
+        let optionYear_mobile = document.createElement('option');
         let optionYear = document.createElement('option');
+
         optionYear.innerText = newYear;
         optionYear.value = newYear;
-        selectYear.appendChild(optionYear);
+
+        optionYear_mobile.innerText = newYear;
+        optionYear_mobile.value = newYear;
+
+        selectYear.appendChild(optionYear_mobile);
         year.appendChild(optionYear);
+        
         return; // EXIT AFTER ADDING UNKNOWN YEAR TO SELECT, BREAKING WHILE.
     }
 
+    console.log(selectYear);
     if (arrayOptions.length == 0) {
+        let optionYear_mobile = document.createElement('option');
         let optionYear = document.createElement('option');
+
         optionYear.innerText = newYear;
         optionYear.value = newYear;
-        selectYear.appendChild(optionYear);
+
+        optionYear_mobile.innerText = newYear;
+        optionYear_mobile.value = newYear;
+
+        selectYear.appendChild(optionYear_mobile);
         year.appendChild(optionYear);
         return; // INIT SELECT
     }

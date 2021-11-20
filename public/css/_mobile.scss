@@ -54,6 +54,14 @@
                         grid-column-end: 5;
                     }
                 }
+                .console--form {
+                    label {
+                        font-size: 12px;
+                    }
+                    input {
+                        font-size: 12px;
+                    }
+                }
             }
             #mobile--menu {
                 position: absolute;
@@ -129,7 +137,7 @@
                         }
                     }
                     .register--title {
-                        grid-template-columns: 28% 14% 18% 9% 11% 10% 15%;
+                        grid-template-columns: 40% 10% 10% 20% 20%;
                         p {
                             font-size: 14px;
                         }

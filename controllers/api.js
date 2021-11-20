@@ -22,6 +22,7 @@ const getOperationsDefault = (req, res) => {
         if(err) {
             console.log(err)
         } else {
+            console.log(row)
             res.send(row);
         }
     })
@@ -34,6 +35,7 @@ const getAllOperations = (req, res) => {
         if(err) {
             console.log(err)
         } else {
+            console.log(row)
             res.send(row);
         }
     })
@@ -64,6 +66,7 @@ const postOperationSearchDate = (req, res) => {
             if(err) {
                 console.log(err)
             } else {
+                console.log(row)
                 res.send(row);
             }
         })
@@ -75,6 +78,7 @@ const postOperationSearchDate = (req, res) => {
                 console.log(err)
                 
             } else {
+                console.log(row)
                 res.send(row);
             }
         })
@@ -115,8 +119,6 @@ const postLogin = (req,res) => {
     const {email} = req.body;
     
     const SQLsentence = 'SELECT * FROM users WHERE email = ' + JSON.stringify(email);
-
-    console.log(email);
 
     DB.query(SQLsentence, (err, row) => {
         if (err) {

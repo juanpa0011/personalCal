@@ -590,6 +590,12 @@ main {
         grid-column-start: 1;
     grid-column-end: 5;
   }
+  body main .folder--logger .console--form label {
+    font-size: 12px;
+  }
+  body main .folder--logger .console--form input {
+    font-size: 12px;
+  }
   body main #mobile--menu {
     position: absolute;
     visibility: hidden;
@@ -686,8 +692,8 @@ main {
     font-size: 12px;
   }
   body main .folder .container--register .register--title {
-    -ms-grid-columns: 28% 14% 18% 9% 11% 10% 15%;
-        grid-template-columns: 28% 14% 18% 9% 11% 10% 15%;
+    -ms-grid-columns: 40% 10% 10% 20% 20%;
+        grid-template-columns: 40% 10% 10% 20% 20%;
   }
   body main .folder .container--register .register--title p {
     font-size: 14px;
