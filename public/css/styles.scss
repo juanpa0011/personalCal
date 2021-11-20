@@ -18,9 +18,13 @@ body {
     grid-template-columns: 5% 90% 5%;
 }
 
-aside {
+aside:nth-child(1) {
     height: 100vh;
-    background: #474C6F;
+    background: linear-gradient( to right, #474C6F , #232850);
+}
+
+aside:nth-child(3) {
+    background: linear-gradient( to left, #474C6F , #232850);
 }
 
 .hidden {

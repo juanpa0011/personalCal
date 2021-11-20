@@ -3,7 +3,7 @@ main {
   display: -ms-grid;
   display: grid;
   height: 100vh;
-  background: #474C6F;
+  background: radial-gradient(#474C6F 40%, #232850 60%);
   padding: 40px 20px;
   gap: 10px;
   -ms-grid-columns: 50% 50%;
@@ -557,6 +557,7 @@ main {
         align-self: center;
     width: 100%;
     height: 100vh;
+    background: radial-gradient(#474C6F 20%, #232850 80%);
     -ms-grid-column: 1;
         grid-column-start: 1;
     grid-column-end: 4;
@@ -765,7 +766,7 @@ main {
     width: 100%;
     height: 100vh;
     padding-top: 100px;
-    background: rgba(11, 16, 51, 0.5);
+    background: rgba(11, 16, 51, 0.8);
     z-index: 10;
     list-style: none;
   }
@@ -779,6 +780,14 @@ main {
     border-radius: 1rem;
     padding: 5px;
     background: #474C6F;
+    -webkit-box-shadow: 0px 2px 15px #1B3170;
+            box-shadow: 0px 2px 15px #1B3170;
+  }
+  ul #mobile--log-out {
+    border: 3px solid red;
+    background: #DD2D2D;
+    -webkit-box-shadow: 0px 2px 15px #DD2D2D;
+            box-shadow: 0px 2px 15px #DD2D2D;
   }
   .cross {
     background: transparent !important;
@@ -821,9 +830,15 @@ body {
       grid-template-columns: 5% 90% 5%;
 }
 
-aside {
+aside:nth-child(1) {
   height: 100vh;
-  background: #474C6F;
+  background: -webkit-gradient(linear, left top, right top, from(#474C6F), to(#232850));
+  background: linear-gradient(to right, #474C6F, #232850);
+}
+
+aside:nth-child(3) {
+  background: -webkit-gradient(linear, right top, left top, from(#474C6F), to(#232850));
+  background: linear-gradient(to left, #474C6F, #232850);
 }
 
 .hidden {
