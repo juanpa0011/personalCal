@@ -12,6 +12,10 @@ main {
       grid-template-rows: 80% 20%;
 }
 
+.register--mobile-class {
+  visibility: hidden;
+}
+
 .container--nav {
   position: relative;
   display: -webkit-box;
@@ -668,6 +672,7 @@ main {
     position: relative;
     display: -ms-grid;
     display: grid;
+    visibility: initial;
     -ms-grid-columns: 15% 15% 15% 15% 15% 15%;
         grid-template-columns: 15% 15% 15% 15% 15% 15%;
     width: 100%;
